@@ -29,6 +29,7 @@ type Project = {
   stack: string[];
   impact: string;
   codeSnippet: string;
+  image?: string;
 };
 
 export default function App() {
@@ -264,6 +265,7 @@ describe('Page Load Performance', () => {
       desc: "A scholarship, immigration, and career opportunities platform with structured content, backend APIs, and a responsive frontend for discovering international programs.",
       stack: ["JavaScript", "React", "Node.js", "REST API", "PostgreSQL"],
       impact: "Structured opportunity discovery and career resources",
+      image: "/japaupdate.jpg",
       codeSnippet: `// Opportunity discovery API
 export async function getOpportunities(filters: OpportunityFilters) {
   const query = new URLSearchParams(filters);
@@ -278,6 +280,7 @@ export async function getOpportunities(filters: OpportunityFilters) {
       desc: "A fitness and wellness platform for workout programs, fitness plans, and healthy lifestyle content, designed for responsive delivery and future user personalization.",
       stack: ["JavaScript", "React", "Node.js", "PostgreSQL", "REST API"],
       impact: "Scalable foundation for fitness content and tracking",
+      image: "/Perfectlooks.jpg",
       codeSnippet: `// Fitness plan service
 export async function getFitnessPlans(userId: string) {
   const response = await fetch('/api/users/' + userId + '/plans');
@@ -929,6 +932,18 @@ export async function getFitnessPlans(userId: string) {
                 className="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/50 transition-all group"
               >
                 <div className="space-y-3">
+                  {p.image && (
+                    <figure className="overflow-hidden rounded-xl border border-slate-800 bg-slate-950">
+                      <img
+                        src={p.image}
+                        alt={`${p.title} project preview`}
+                        className="h-48 w-full object-cover"
+                      />
+                      <figcaption className="px-3 py-2 text-xs font-mono text-slate-400">
+                        {p.title}
+                      </figcaption>
+                    </figure>
+                  )}
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono text-emerald-400">
                       {p.role}
