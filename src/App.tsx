@@ -257,6 +257,33 @@ describe('Page Load Performance', () => {
   });
 });`,
     },
+    {
+      title: "JapaUpdate Scholarship Platform",
+      category: "frontend",
+      role: "Full-Stack Developer",
+      desc: "A scholarship, immigration, and career opportunities platform with structured content, backend APIs, and a responsive frontend for discovering international programs.",
+      stack: ["JavaScript", "React", "Node.js", "REST API", "PostgreSQL"],
+      impact: "Structured opportunity discovery and career resources",
+      codeSnippet: `// Opportunity discovery API
+export async function getOpportunities(filters: OpportunityFilters) {
+  const query = new URLSearchParams(filters);
+  const response = await fetch('/api/opportunities?' + query);
+  return response.json();
+}`,
+    },
+    {
+      title: "PerfectLooks Fitness Platform",
+      category: "backend",
+      role: "Full-Stack Developer",
+      desc: "A fitness and wellness platform for workout programs, fitness plans, and healthy lifestyle content, designed for responsive delivery and future user personalization.",
+      stack: ["JavaScript", "React", "Node.js", "PostgreSQL", "REST API"],
+      impact: "Scalable foundation for fitness content and tracking",
+      codeSnippet: `// Fitness plan service
+export async function getFitnessPlans(userId: string) {
+  const response = await fetch('/api/users/' + userId + '/plans');
+  return response.json();
+}`,
+    },
   ];
 
   const filteredProjects =
@@ -612,6 +639,102 @@ describe('Page Load Performance', () => {
           </div>
 
           <div className="space-y-4">
+            {/* Gofree Global Company Limited */}
+            <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3">
+                <div>
+                  <h4 className="font-bold text-white text-base">Gofree Global Company Limited</h4>
+                  <p className="text-xs text-emerald-400 font-mono">Web Developer · Part-time</p>
+                </div>
+                <span className="text-xs font-mono bg-slate-800 border border-slate-700 px-3 py-1 rounded-full text-slate-300">August 2025 – Present</span>
+              </div>
+              <ul className="mt-4 space-y-2 text-xs sm:text-sm text-slate-300 list-disc list-inside">
+                <li>Teach web development and mentor students through practical projects.</li>
+                <li>Create and maintain websites for the company.</li>
+                <li>Apply technical and teaching skills to real-world web projects.</li>
+              </ul>
+            </div>
+
+            {/* DevByte Community */}
+            <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3">
+                <div>
+                  <h4 className="font-bold text-white text-base">DevByte Community</h4>
+                  <p className="text-xs text-emerald-400 font-mono">Back End Developer · Volunteer</p>
+                </div>
+                <span className="text-xs font-mono bg-slate-800 border border-slate-700 px-3 py-1 rounded-full text-slate-300">August 2025 – Present</span>
+              </div>
+              <ul className="mt-4 space-y-2 text-xs sm:text-sm text-slate-300 list-disc list-inside">
+                <li>Share coding resources and assist with online development workshops.</li>
+                <li>Contribute to community projects and mentorship programs.</li>
+                <li>Support aspiring developers while strengthening collaboration and communication skills.</li>
+              </ul>
+            </div>
+
+            {/* DKOO Company */}
+            <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3">
+                <div>
+                  <h4 className="font-bold text-white text-base">DKOO Company</h4>
+                  <p className="text-xs text-emerald-400 font-mono">Web Administrator · Part-time</p>
+                </div>
+                <span className="text-xs font-mono bg-slate-800 border border-slate-700 px-3 py-1 rounded-full text-slate-300">November 2025 – March 2026</span>
+              </div>
+              <ul className="mt-4 space-y-2 text-xs sm:text-sm text-slate-300 list-disc list-inside">
+                <li>Manage company websites, updates, patches, uptime, and security.</li>
+                <li>Resolve technical issues and optimize speed, functionality, and user experience.</li>
+                <li>Build reliable solutions with PERN, Next.js, Tailwind, and PostgreSQL.</li>
+              </ul>
+            </div>
+
+            {/* DYEN Academy */}
+            <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3">
+                <div>
+                  <h4 className="font-bold text-white text-base">DYEN Academy</h4>
+                  <p className="text-xs text-emerald-400 font-mono">Web Development Intern · On-site</p>
+                </div>
+                <span className="text-xs font-mono bg-slate-800 border border-slate-700 px-3 py-1 rounded-full text-slate-300">July 2025 – December 2025</span>
+              </div>
+              <ul className="mt-4 space-y-2 text-xs sm:text-sm text-slate-300 list-disc list-inside">
+                <li>Built responsive web pages and implemented interactive user interfaces.</li>
+                <li>Collaborated on academy projects using HTML, CSS, and JavaScript.</li>
+                <li>Strengthened frontend design and responsive layout skills through real-world work.</li>
+              </ul>
+            </div>
+
+            {/* CodeAlpha */}
+            <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3">
+                <div>
+                  <h4 className="font-bold text-white text-base">CodeAlpha</h4>
+                  <p className="text-xs text-emerald-400 font-mono">Frontend Development Intern · Remote</p>
+                </div>
+                <span className="text-xs font-mono bg-slate-800 border border-slate-700 px-3 py-1 rounded-full text-slate-300">October 2025 – November 2025</span>
+              </div>
+              <ul className="mt-4 space-y-2 text-xs sm:text-sm text-slate-300 list-disc list-inside">
+                <li>Built responsive and user-friendly web applications with modern frontend practices.</li>
+                <li>Worked with HTML, CSS, and JavaScript on real-world development projects.</li>
+                <li>Delivered weekly tasks, created GitHub repositories, and documented project work.</li>
+              </ul>
+            </div>
+
+            {/* FlexiSAF Edusoft Limited */}
+            <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3">
+                <div>
+                  <h4 className="font-bold text-white text-base">FlexiSAF Edusoft Limited</h4>
+                  <p className="text-xs text-emerald-400 font-mono">Back End Developer Intern · Remote</p>
+                </div>
+                <span className="text-xs font-mono bg-slate-800 border border-slate-700 px-3 py-1 rounded-full text-slate-300">May 2025 – August 2025</span>
+              </div>
+              <ul className="mt-4 space-y-2 text-xs sm:text-sm text-slate-300 list-disc list-inside">
+                <li>Completed Java backend development training and practical assignments.</li>
+                <li>Applied object-oriented programming principles to functional backend solutions.</li>
+                <li>Developed a Cooperative and Thrift Association application as a final project.</li>
+              </ul>
+            </div>
+
             {/* Role 1 */}
             <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 relative overflow-hidden">
               <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3">
