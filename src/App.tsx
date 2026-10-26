@@ -125,13 +125,13 @@ export default function App() {
 
   const handleTerminalSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const cmd = terminalInput.trim().toLowerCase();
+    const cmd = terminalInput.trim().replace(/["']/g, "").toLowerCase();
     let output = "";
 
     switch (cmd) {
       case "whoami":
         output =
-          "Joseph Betty | Software Engineer (Fullstack & Web Accessibility Specialist)";
+          "Joseph Betty | Senior Software Engineer (Frontend) & Web Accessibility Specialist";
         break;
       case "stack":
         output =
@@ -149,12 +149,16 @@ export default function App() {
         output =
           "Email: josephhibetty@gmail.com | Phone: 09018258090 | GitHub: github.com/joseph1435";
         break;
+      case "help":
+        output =
+          "Available commands: whoami, stack, experience, a11y-check, contact, clear";
+        break;
       case "clear":
         setTerminalHistory([]);
         setTerminalInput("");
         return;
       default:
-        output = `Command not recognized: '${cmd}'. Type 'help' for options.`;
+        output = `Command not recognized: '${terminalInput}'. Type 'help' for options.`;
     }
 
     setTerminalHistory((prev) => [...prev, { cmd: terminalInput, output }]);
